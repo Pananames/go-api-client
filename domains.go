@@ -121,7 +121,7 @@ type checkDomainsBulkOptions struct {
 type RegisterDomainOptions struct {
 	Domain            string   `json:"domain,omitempty"`
 	Period            int      `json:"period,omitempty"`
-	WhoisPrivacy      bool     `json:"whois_privacy,omitempty"`
+	WhoisPrivacy      bool     `json:"whois_privacy"`
 	PremiumPrice      float64  `json:"premium_price,omitempty"`
 	ClaimsAccepted    bool     `json:"claims_accepted,omitempty"`
 	AddReqAccepted    bool     `json:"add_req_accepted,omitempty"`

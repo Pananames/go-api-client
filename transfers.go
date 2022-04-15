@@ -26,7 +26,7 @@ type InitTransferInOptions struct {
 	Domain            string              `json:"domain,omitempty"`
 	AuthCode          string              `json:"auth_code,omitempty"`
 	PremiumPrice      float64             `json:"premium_price,omitempty"`
-	WhoisPrivacy      bool                `json:"whois_privacy,omitempty"`
+	WhoisPrivacy      bool                `json:"whois_privacy"`
 	RegistrantContact *Contact            `json:"registrant_contact,omitempty"`
 	AdminContact      *Contact            `json:"admin_contact,omitempty"`
 	TechContact       *Contact            `json:"tech_contact,omitempty"`
