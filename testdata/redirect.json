@@ -1,0 +1,9 @@
+{
+  "data": {
+    "url": "https://test.com",
+    "masking_enabled": true,
+    "masking_title": "string",
+    "masking_desc": "string",
+    "masking_kwd": "string"
+  }
+}

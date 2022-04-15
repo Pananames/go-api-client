@@ -1,0 +1,10 @@
+{
+  "data": {
+    "id": "string",
+    "name": "string",
+    "type": "string",
+    "value": "string",
+    "priority": 1,
+    "ttl": 1
+  }
+}

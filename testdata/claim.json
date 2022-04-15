@@ -1,0 +1,35 @@
+{
+  "data": [
+    {
+      "trade_mark": "string",
+      "jurisdiction": "string",
+      "jurisdiction_country_code": "string",
+      "goods": "string",
+      "registrant_contact": {
+        "organization": "string",
+        "name": "string",
+        "street": "string",
+        "state": "string",
+        "city": "string",
+        "zip": "string",
+        "country_code": "string",
+        "phone": "string",
+        "email": "string"
+      },
+      "agent_contact": {
+        "organization": "string",
+        "name": "string",
+        "street": "string",
+        "state": "string",
+        "city": "string",
+        "zip": "string",
+        "country_code": "string",
+        "phone": "string",
+        "email": "string"
+      },
+      "description": [
+        "string"
+      ]
+    }
+  ]
+}

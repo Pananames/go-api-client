@@ -1,0 +1,36 @@
+{
+    "meta": {
+        "current_page": 1,
+        "per_page": 30,
+        "total_entries": 2,
+        "total_pages": 1
+    },
+    "data": [
+        {
+            "email": "test@test1.com",
+            "first_email_date": "2020-01-02T03:04:05Z",
+            "verify_date": "",
+            "suspend_date": "2020-01-02T03:04:05Z",
+            "status": "unverified",
+            "domains": [
+                {
+                    "domain": "test1.com",
+                    "status": "ok"
+                }
+            ]
+        },
+        {
+            "email": "test@test2.com",
+            "first_email_date": "2020-01-02T03:04:05Z",
+            "verify_date": "",
+            "suspend_date": "2020-01-02T03:04:05Z",
+            "status": "unverified",
+            "domains": [
+                {
+                    "domain": "test2.com",
+                    "status": "ok"
+                }
+            ]
+        }
+    ]
+}

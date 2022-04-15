@@ -1,0 +1,57 @@
+{
+  "data": {
+    "whois_privacy": true,
+    "preview": true,
+    "registrant_contact": {
+      "org": "string",
+      "name": "string",
+      "email": "string",
+      "address": "string",
+      "city": "string",
+      "state": "string",
+      "zip": "string",
+      "country": "string",
+      "phone": "string",
+      "extras": []
+    },
+    "admin_contact": {
+      "org": "string",
+      "name": "string",
+      "email": "string",
+      "address": "string",
+      "city": "string",
+      "state": "string",
+      "zip": "string",
+      "country": "string",
+      "phone": "string",
+      "extras": []
+    },
+    "tech_contact": {
+      "org": "string",
+      "name": "string",
+      "email": "string",
+      "address": "string",
+      "city": "string",
+      "state": "string",
+      "zip": "string",
+      "country": "string",
+      "phone": "string",
+      "extras": []
+    },
+    "billing_contact": {
+      "org": "string",
+      "name": "string",
+      "email": "string",
+      "address": "string",
+      "city": "string",
+      "state": "string",
+      "zip": "string",
+      "country": "string",
+      "phone": "string",
+      "extras": []
+    }
+  },
+  "meta": {
+    "notice": "string"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "current_page": 1,
+    "per_page": 30,
+    "total_entries": 1,
+    "total_pages": 1
+  },
+  "data": [
+    {
+      "domain": "test.com",
+      "domain_idn": "string",
+      "premium": true,
+      "auto_renew": true,
+      "whois_privacy": true,
+      "lock_status": "unlocked",
+      "registration_date": "2020-01-02T03:04:05Z",
+      "expiration_date": "2020-01-02T03:04:05Z",
+      "deletion_date": "2020-01-02T03:04:05Z",
+      "status": "ok",
+      "name_servers": [
+        "string"
+      ],
+      "child_name_servers": [
+        {
+          "hostname": "string",
+          "ipv4": "string",
+          "ipv6": "string"
+        }
+      ]
+    }
+  ]
+}

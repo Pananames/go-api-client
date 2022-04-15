@@ -1,0 +1,31 @@
+{
+    "data": [
+        {
+            "tld": "XYZ",
+            "idn": true,
+            "dnssec": true,
+            "prices": {
+                "currency": "usd",
+                "register": 9.79,
+                "renew": 9.79,
+                "transfer": 9.79,
+                "redeem": 65.79
+            },
+            "promo_two_years_prices": {
+                "currency": "usd",
+                "register": 2.64
+            },
+            "promo_two_years_untill": "2020-01-02T03:04:05Z",
+            "promo_multi_years_prices": {
+                "2": {
+                    "promo_multi_years_prices": {
+                        "currency": "usd",
+                        "register": 2.64
+                    },
+                    "promo_multi_years_untill": "2020-01-02T03:04:05Z"
+                }
+            }
+        }
+    ]
+}
+

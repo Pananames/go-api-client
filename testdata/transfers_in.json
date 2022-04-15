@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "current_page": 1,
+    "per_page": 30,
+    "total_entries": 1,
+    "total_pages": 1
+  },
+  "data": [
+    {
+      "domain": "test.com",
+      "transfer_status": "waiting registrant confirmation",
+      "init_date": "2020-01-02T03:04:05Z",
+      "premium_price": 123,
+      "whois_privacy": true,
+      "registrant_contact": {
+        "org": "string",
+        "name": "string",
+        "email": "string",
+        "address": "string",
+        "city": "string",
+        "state": "string",
+        "zip": "string",
+        "country": "string",
+        "phone": "string",
+        "extras": []
+      },
+      "admin_contact": {
+        "org": "string",
+        "name": "string",
+        "email": "string",
+        "address": "string",
+        "city": "string",
+        "state": "string",
+        "zip": "string",
+        "country": "string",
+        "phone": "string",
+        "extras": []
+      },
+      "tech_contact": {
+        "org": "string",
+        "name": "string",
+        "email": "string",
+        "address": "string",
+        "city": "string",
+        "state": "string",
+        "zip": "string",
+        "country": "string",
+        "phone": "string",
+        "extras": []
+      },
+      "billing_contact": {
+        "org": "string",
+        "name": "string",
+        "email": "string",
+        "address": "string",
+        "city": "string",
+        "state": "string",
+        "zip": "string",
+        "country": "string",
+        "phone": "string",
+        "extras": []
+      },
+      "name_servers": [
+        "string"
+      ],
+      "name_server_records": [
+        {
+          "id": "string",
+          "name": "string",
+          "type": "A",
+          "value": "string",
+          "priority": 0,
+          "ttl": 0
+        }
+      ]
+    }
+  ]
+}

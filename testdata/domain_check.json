@@ -1,0 +1,32 @@
+{
+    "data": {
+        "domain": "test.xyz",
+        "available": false,
+        "premium": false,
+        "prices": {
+            "currency": "usd",
+            "register": 1.00,
+            "renew": 2.00,
+            "transfer": 3.00,
+            "redeem": 4.00
+        },
+        "promo_two_years_prices": {
+            "currency": "usd",
+            "register": 1.00,
+            "renew": 2.00,
+            "transfer": 3.00,
+            "redeem": 4.00
+        },
+        "promo_multi_years_prices": {
+            "2": {
+                "currency": "usd",
+                "register": 1.00,
+                "renew": 2.00,
+                "transfer": 3.00,
+                "redeem": 4.00
+            }
+        },
+        "claim": false,
+        "add_req": false
+    }
+}

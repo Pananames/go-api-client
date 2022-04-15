@@ -1,0 +1,21 @@
+{
+  "data": {
+    "url": "https://test.com",
+    "masking_enabled": true,
+    "masking_title": "string",
+    "masking_desc": "string",
+    "masking_kwd": "string",
+    "domain_list": [
+      {
+        "domain": "test.com",
+        "domain_queued": true,
+        "error": "string"
+      },
+      {
+        "domain": "test.app",
+        "domain_queued": true,
+        "error": "string"
+      }
+    ]
+  }
+}

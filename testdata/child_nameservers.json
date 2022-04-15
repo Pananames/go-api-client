@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "hostname": "ns1.test.com",
+      "ipv4": "string",
+      "ipv6": "string"
+    },
+    {
+      "hostname": "ns2.test.com",
+      "ipv4": "string",
+      "ipv6": "string"
+    }
+  ]
+}
