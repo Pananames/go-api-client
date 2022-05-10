@@ -19,8 +19,8 @@ func RedeemWithContext() {
 
 	ct, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
-	timeoutContext := pn.WithContext(ct)
-	redeemInfo, err := pnCli.RedeemDomain("test.com", timeoutContext)
+	timeoutContext := pananames.WithContext(ct)
+	redeemInfo, err := pnClient.RedeemDomain("test.com", timeoutContext)
 	if err != nil {
 		log.Fatalf("Failed to redeem domain: %v", err)
 	}
