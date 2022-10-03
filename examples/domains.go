@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/pananames/go-api-client"
+	pananames "github.com/pananames/go-api-client"
 )
 
 // Check bulk domains
@@ -97,7 +97,7 @@ func DeleteDomain() {
 		log.Fatalf("Failed to create client: %v", err)
 	}
 	domain := "test.com"
-	err := pnClient.DeleteDomain(domain)
+	err = pnClient.DeleteDomain(domain)
 	if err != nil {
 		log.Fatalf("Failed to delete domain: %v", err)
 	}
