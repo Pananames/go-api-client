@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/FozzyHosting/go-pananames"
+	"github.com/pananames/go-api-client"
 )
 
 // Redeem domain with context

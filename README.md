@@ -11,7 +11,7 @@ The actual API Documentation available on this [link](https://docs.pananames.com
 ## Usage
 
 ```go
-import "github.com/FozzyHosting/go-pananames"
+import "github.com/pananames/go-api-client"
 
 pnClient, err := pananames.NewClient("token")
 if err != nil {

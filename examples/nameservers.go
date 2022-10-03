@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/FozzyHosting/go-pananames"
+	"github.com/pananames/go-api-client"
 )
 
 // Get, Set, Delete NameServers

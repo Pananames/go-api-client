@@ -1,4 +1,4 @@
-module pananames
+module github.com/pananames/go-api-client
 
 go 1.17
 
