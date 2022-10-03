@@ -2,6 +2,8 @@
 
 Pananames API v2 Golang Client
 
+[![Test Status](https://github.com/Pananames/go-api-client/actions/workflows/test.yml/badge.svg)](https://github.com/Pananames/go-api-client/actions/workflows/test.yml)
+
 ## Developer Documentation
 
 The actual API Documentation available on this [link](https://docs.pananames.com/).
