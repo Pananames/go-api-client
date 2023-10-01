@@ -5,7 +5,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 	"reflect"
@@ -32,7 +32,7 @@ type Client struct {
 	httpClient *http.Client
 	baseURL    *url.URL
 	token      string
-	UserAgent  string
+	userAgent  string
 }
 
 // Represents api response
@@ -121,10 +121,28 @@ func WithContext(ctx context.Context) RequestOptionFunc {
 	}
 }
 
-// Set BaseURL for api client
-func BaseURL(baseURL string) Option {
+// WithBaseURL Set BaseURL for api client
+func WithBaseURL(baseURL string) Option {
 	return func(c *Client) error {
 		return c.setBaseURL(baseURL)
+	}
+}
+
+// WithHTTPClient Set configured http.Client for api client
+func WithHTTPClient(httpClient *http.Client) Option {
+	return func(c *Client) error {
+		c.httpClient = httpClient
+
+		return nil
+	}
+}
+
+// WithUserAgent Set user agent for api client
+func WithUserAgent(userAgent string) Option {
+	return func(c *Client) error {
+		c.userAgent = userAgent
+
+		return nil
 	}
 }
 
@@ -152,11 +170,11 @@ func (c *Client) parseOptions(opts ...Option) error {
 // Creates a new instance of api client
 func NewClient(token string, opts ...Option) (*Client, error) {
 	c := &Client{
-		UserAgent:  userAgent,
+		userAgent:  userAgent,
 		token:      token,
 		httpClient: &http.Client{Timeout: time.Second * 30},
 	}
-	c.setBaseURL(baseURL)
+	_ = c.setBaseURL(baseURL)
 	if err := c.parseOptions(opts...); err != nil {
 		return nil, err
 	}
@@ -205,7 +223,7 @@ func (c *Client) NewRequest(method, path string, opt interface{}, options []Requ
 	reqHeaders := make(http.Header)
 	reqHeaders.Set("Accept", "application/json")
 	reqHeaders.Set("SIGNATURE", c.token)
-	reqHeaders.Set("User-Agent", c.UserAgent)
+	reqHeaders.Set("User-Agent", c.userAgent)
 
 	// Validate and marshall request body if any
 	var body []byte
@@ -257,7 +275,7 @@ func CheckResponse(r *http.Response) error {
 		return nil
 	}
 
-	data, err := ioutil.ReadAll(r.Body)
+	data, err := io.ReadAll(r.Body)
 	if err != nil {
 		return err
 	}
