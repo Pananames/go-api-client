@@ -9,6 +9,7 @@ import (
 	"testing"
 	"time"
 
+	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
 
@@ -44,7 +45,7 @@ var wantClaimContact = &ClaimContact{
 func setup(t *testing.T) (*http.ServeMux, *httptest.Server, *Client) {
 	mux := http.NewServeMux()
 	server := httptest.NewServer(mux)
-	client, err := NewClient("secret", BaseURL(server.URL))
+	client, err := NewClient("secret", WithBaseURL(server.URL))
 	if err != nil {
 		server.Close()
 		t.Fatalf("Failed to create a new client: %v", err)
@@ -111,4 +112,26 @@ func TestRequestOptions(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
+}
+
+func TestWithHTTPClient(t *testing.T) {
+	httpClient := &http.Client{
+		Timeout: 60 * time.Second,
+	}
+
+	c, err := NewClient("secret", WithHTTPClient(httpClient))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	assert.Equal(t, 60*time.Second, c.httpClient.Timeout)
+}
+
+func TestWithUserAgent(t *testing.T) {
+	c, err := NewClient("secret", WithUserAgent("Custom"))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	assert.Equal(t, "Custom", c.userAgent)
 }
