@@ -24,7 +24,7 @@ var wantDomainInfo = &Domain{
 	LockStatus:       "unlocked",
 	RegistrationDate: &PnTime{wantDate},
 	ExpirationDate:   &PnTime{wantDate},
-	DeletionDate:     &PnTime{wantDate},
+	DeletionDate:     &PnDate{wantDateOnly},
 	Status:           "ok",
 	NameServers:      &NameServers{"string"},
 	ChildNameServers: []*ChildNameServer{{

@@ -8,7 +8,7 @@
       "lock_status": "unlocked",
       "registration_date": "2020-01-02T03:04:05Z",
       "expiration_date": "2020-01-02T03:04:05Z",
-      "deletion_date": "2020-01-02T03:04:05Z",
+      "deletion_date": "2020-01-02",
       "status": "ok",
       "name_servers": [
         "string"

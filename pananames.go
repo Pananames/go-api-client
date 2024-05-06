@@ -27,6 +27,10 @@ type PnTime struct {
 	time.Time
 }
 
+type PnDate struct {
+	time.Time
+}
+
 // Represents api client
 type Client struct {
 	httpClient *http.Client
@@ -83,6 +87,20 @@ func (t *PnTime) UnmarshalJSON(data []byte) error {
 		return nil
 	}
 	return t.Time.UnmarshalJSON(data)
+}
+
+func (d *PnDate) UnmarshalJSON(data []byte) error {
+	val := strings.Trim(string(data), `"`)
+	if val == "" {
+		return nil
+	}
+
+	var err error
+	if d.Time, err = time.Parse(time.DateOnly, val); err != nil {
+		return err
+	}
+
+	return nil
 }
 
 func (e *ErrorResponse) Error() string {
@@ -295,7 +313,7 @@ func fixZeroDate(value interface{}) {
 	}
 }
 
-// Set &PnTime to nil if it zero PnTime
+// Set &PnTime or &PnDate to nil if it zero PnTime or PnDate
 // If not, continue parse with fixZeroDate()
 func zeroPnTime(v reflect.Value) {
 	if v.IsZero() {
@@ -303,6 +321,12 @@ func zeroPnTime(v reflect.Value) {
 	}
 	if v.Type() == reflect.TypeOf(&PnTime{}) {
 		if t, ok := v.Elem().Interface().(PnTime); ok {
+			if t.IsZero() {
+				v.Set(reflect.Zero(v.Type()))
+			}
+		}
+	} else if v.Type() == reflect.TypeOf(&PnDate{}) {
+		if t, ok := v.Elem().Interface().(PnDate); ok {
 			if t.IsZero() {
 				v.Set(reflect.Zero(v.Type()))
 			}
