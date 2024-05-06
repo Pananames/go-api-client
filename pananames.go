@@ -96,7 +96,7 @@ func (d *PnDate) UnmarshalJSON(data []byte) error {
 	}
 
 	var err error
-	if d.Time, err = time.Parse(time.DateOnly, val); err != nil {
+	if d.Time, err = time.Parse("2006-01-02", val); err != nil {
 		return err
 	}
 
