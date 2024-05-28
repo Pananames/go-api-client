@@ -14,6 +14,7 @@ import (
 )
 
 var wantDate = time.Date(2020, time.January, 2, 3, 4, 5, 0, time.UTC)
+var wantDateOnly = time.Date(2020, time.January, 2, 0, 0, 0, 0, time.UTC)
 
 var wantContact = &Contact{
 	Org:     "string",

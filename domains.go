@@ -17,7 +17,7 @@ type Domain struct {
 	LockStatus       string             `json:"lock_status"`
 	RegistrationDate *PnTime            `json:"registration_date"`
 	ExpirationDate   *PnTime            `json:"expiration_date"`
-	DeletionDate     *PnTime            `json:"deletion_date"`
+	DeletionDate     *PnDate            `json:"deletion_date"`
 	Status           string             `json:"status"`
 	NameServers      *NameServers       `json:"name_servers"`
 	ChildNameServers []*ChildNameServer `json:"child_name_servers"`
